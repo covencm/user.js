@@ -33,7 +33,7 @@ case $extension in
        ;;
 [uU]*)
   echo "Installing Ublock Origin..."
-  ublock_version="1.68.0"
+  ublock_version="1.69.0"
   wget -O uBlock0_$ublock_version.firefox.signed.xpi https://github.com/gorhill/uBlock/releases/download/$ublock_version/uBlock0_$ublock_version.firefox.signed.xpi
   setsid -f firefox uBlock0_$ublock_version.firefox.signed.xpi
   ;;
