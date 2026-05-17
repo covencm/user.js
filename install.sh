@@ -25,15 +25,15 @@ cp firefox/* $HOME/.config/mozilla/firefox/*.default-release
 
 read -p  "Privacy Badger or Ublock Origin ? (p/u): " extension
 
-case $extension in 
-[pP]*) 
+case $extension in
+[pP]*)
        echo "Installing Privacy Badger..."
        wget -O privacy-badger17.xpi https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17
        setsid -f firefox privacy-badger17.xpi
        ;;
 [uU]*)
   echo "Installing Ublock Origin..."
-  ublock_version="1.70.0"
+  ublock_version="1.71.0"
   wget -O uBlock0_$ublock_version.firefox.signed.xpi https://github.com/gorhill/uBlock/releases/download/$ublock_version/uBlock0_$ublock_version.firefox.signed.xpi
   setsid -f firefox uBlock0_$ublock_version.firefox.signed.xpi
   ;;
